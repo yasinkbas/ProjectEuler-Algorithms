@@ -12,7 +12,7 @@ var minNumber = 0
 outherLoop: for i in stride(from: 999, to: 100, by: -1) {
     inLoop: for j in stride(from: 999, to: 100, by: -1) {
         if i == 990 && j == 990 { // its just testing for all possibility
-            print("this code try every big number possibility")
+            print("this code tries every big number possibility")
         }
         let multiple = i * j
         var result = Array(String(multiple))
