@@ -28,9 +28,9 @@ var theSerie = "7316717653133062491922511967442657474235534919493496983520312774
 
 
 func getAdjacentDigits(serie:String, digitNum: Int) -> Int{
-    var charArray = Array(serie)
+    let charArray = Array(serie)
     var tempArray = Array<Character>()
-    var total = 1
+    var max = 1
     for i in charArray {
         tempArray.append(i)
         if tempArray.count == 13 {
@@ -38,12 +38,12 @@ func getAdjacentDigits(serie:String, digitNum: Int) -> Int{
             for i in tempArray {
                 times *= Int(String(i))!
             }
-            total = total > times ? total : times
+            max = max > times ? max : times
             tempArray.remove(at: 0)
         }
     }
     
-    return total
+    return max
 }
 
 getAdjacentDigits(serie: theSerie, digitNum: 13) // 23514624000
